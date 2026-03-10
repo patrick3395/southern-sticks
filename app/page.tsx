@@ -19,13 +19,6 @@ const publications = [
   { name: "SOUTHERN LIVING", weight: "font-bold italic" },
 ];
 
-const lookbookImages = [
-  { src: "/images/polo-navy-stripe-model.jpg", name: "The Fairway Stripe Polo" },
-  { src: "/images/polo-dot-model.jpg", name: "The Dot Performance Polo" },
-  { src: "/images/polo-blue-pinstripe-model.jpg", name: "The Solid Performance Polo" },
-  { src: "/images/polo-blue-stripe-hanger.jpg", name: "The Blue Ridge Polo" },
-  { src: "/images/hat-classic-mockup.jpg", name: "The Classic Navy Rope Hat" },
-];
 
 const testimonials = [
   {
@@ -234,39 +227,68 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      {/* ═══════ C. LIFESTYLE LOOKBOOK GRID ═══════ */}
+      {/* ═══════ C. FOUNDER SPOTLIGHT ═══════ */}
       <FadeIn>
-        <section className="bg-white px-6 py-24">
-          <div className="mx-auto max-w-6xl">
-            <div className="text-center">
-              <h2 className="font-display text-5xl tracking-wider text-[#1A3A2A] md:text-6xl">
-                THE LOOKBOOK
-              </h2>
-              <div className="mx-auto mt-4 h-px w-16 bg-[#C9A84C]" />
-            </div>
-            <div className="masonry-grid mt-14">
-              {lookbookImages.map((item, i) => (
-                <div key={i} className="group relative overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={img(item.src)}
-                    alt={item.name}
-                    className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-black/70 to-transparent px-4 py-6 transition-transform duration-300 group-hover:translate-y-0">
-                    <p className="text-sm font-medium text-white">{item.name}</p>
+        <section className="bg-[#F5F0E8]">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+
+              {/* Left — founder image placeholder */}
+              <div className="relative flex min-h-[480px] items-center justify-center overflow-hidden bg-[#1A3A2A] md:min-h-[600px]">
+                {/* Placeholder until owner photo is added */}
+                <div className="flex flex-col items-center gap-4 px-12 text-center">
+                  <div className="flex h-32 w-32 items-center justify-center rounded-full border-2 border-[#C9A84C]/40">
+                    <svg className="h-16 w-16 text-[#C9A84C]/30" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
                   </div>
+                  <p className="font-serif text-sm italic text-[#C9A84C]/60">
+                    Photo coming soon
+                  </p>
                 </div>
-              ))}
-            </div>
-            <div className="mt-12 text-center">
-              <Link
-                href="/shop"
-                className="group inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#1A3A2A] transition-colors hover:text-[#C9A84C]"
-              >
-                VIEW FULL LOOKBOOK
-                <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-              </Link>
+
+                {/* Gold accent corner */}
+                <div className="absolute bottom-0 right-0 h-24 w-24 border-b-4 border-r-4 border-[#C9A84C]/30" />
+                <div className="absolute left-0 top-0 h-24 w-24 border-l-4 border-t-4 border-[#C9A84C]/30" />
+              </div>
+
+              {/* Right — founder story */}
+              <div className="flex flex-col justify-center px-10 py-16 md:px-14 lg:px-20">
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#C9A84C]">
+                  The Man Behind the Brand
+                </p>
+                <h2 className="mt-4 font-display text-5xl leading-none tracking-wider text-[#1A3A2A] md:text-6xl">
+                  MEET THE<br />FOUNDER
+                </h2>
+                <div className="mt-6 h-px w-12 bg-[#C9A84C]" />
+
+                {/* Placeholder bio — to be filled in */}
+                <p className="mt-8 font-serif text-lg italic leading-relaxed text-[#1A3A2A]/50">
+                  — Founder story coming soon —
+                </p>
+                <p className="mt-4 leading-relaxed text-[#1A1A1A]/50 text-sm">
+                  [Owner bio, background, and the story of how Southern Sticks came to be will live here.]
+                </p>
+
+                {/* Signature placeholder */}
+                <div className="mt-10 border-l-2 border-[#C9A84C] pl-6">
+                  <p className="font-serif text-xl italic text-[#1A3A2A]">
+                    "Play with pride, on and off the course."
+                  </p>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#1A1A1A]/40">
+                    — Founder, Southern Sticks
+                  </p>
+                </div>
+
+                <Link
+                  href="/about"
+                  className="group mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#1A3A2A] transition-colors hover:text-[#C9A84C]"
+                >
+                  OUR STORY
+                  <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                </Link>
+              </div>
+
             </div>
           </div>
         </section>
