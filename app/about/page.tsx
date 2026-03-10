@@ -58,7 +58,7 @@ export default function AboutPage() {
       <section
         className="relative flex min-h-[60vh] items-end px-6 py-20 md:min-h-[70vh] md:py-28"
         style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=1600&q=85&auto=format&fit=crop)`,
+          backgroundImage: `url(https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=1600&q=85&auto=format&fit=crop)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
