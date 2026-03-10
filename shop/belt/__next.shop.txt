@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[39756,["/southern-sticks/_next/static/chunks/ff1a16fafef87110.js","/southern-sticks/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
 3:I[37457,["/southern-sticks/_next/static/chunks/ff1a16fafef87110.js","/southern-sticks/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-0:{"buildId":"upUJywWen5DqMTh82l7xh","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"WUC28wA5xBu0NmNE6y-Y2","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
