@@ -1,7 +1,8 @@
-:HL["/southern-sticks/_next/static/chunks/7f5408c1b1a44a4e.css","style"]
+:HL["/southern-sticks/_next/static/chunks/72b35080a1d8b999.css","style"]
 :HL["/southern-sticks/_next/static/media/38df7484fe560b25-s.p.60f15535.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/southern-sticks/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/southern-sticks/_next/static/media/f5031e7b18bdfbb3-s.p.3dcbbce0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/southern-sticks/_next/static/media/fabcf92ba1ccea36-s.p.19f28380.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/southern-sticks/images/logo-patch.jpg","image"]
 :HL["/southern-sticks/images/logo-embroidery.jpg","image"]
-0:{"buildId":"BRNOM2XvPWVA0C_drn_Kf","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"shop","paramType":null,"paramKey":"shop","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"ball-marker-set","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"vDx6fGJefkZr2ySx7QKxa","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"shop","paramType":null,"paramKey":"shop","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"ball-marker-set","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
