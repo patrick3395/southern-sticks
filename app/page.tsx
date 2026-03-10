@@ -11,13 +11,6 @@ const featured = products.slice(0, 4);
 const marqueeText =
   "FREE SHIPPING OVER $75  \u00B7  THE FAIRWAY POLO IS BACK  \u00B7  NEW: THE CADDIE BUCKET HAT  \u00B7  PLAY WITH PRIDE  \u00B7  ";
 
-const publications = [
-  { name: "GOLF DIGEST", weight: "font-bold" },
-  { name: "GOLF MAGAZINE", weight: "font-normal italic" },
-  { name: "GOLFWEEK", weight: "font-bold" },
-  { name: "MEN\u2019S JOURNAL", weight: "font-normal" },
-  { name: "SOUTHERN LIVING", weight: "font-bold italic" },
-];
 
 
 const testimonials = [
@@ -67,52 +60,23 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ═══════ A. SOCIAL PROOF BAR ═══════ */}
-      <FadeIn>
-        <section className="border-b border-gray-200 border-t border-t-gray-200 bg-white px-6 py-10">
-          <div className="mx-auto max-w-5xl text-center">
-            <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.4em] text-[#1A1A1A]/40">
-              As Seen In
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-              {publications.map((pub, i) => (
-                <span key={pub.name} className="flex items-center gap-4">
-                  <span
-                    className={`font-serif text-base tracking-wide text-[#1A1A1A]/60 md:text-lg ${pub.weight}`}
-                  >
-                    {pub.name}
-                  </span>
-                  {i < publications.length - 1 && (
-                    <span className="text-[#C9A84C]">&middot;</span>
-                  )}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-      </FadeIn>
-
       {/* Editorial Value Strip */}
       <FadeIn>
         <section className="bg-white px-6 py-16">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-3">
-            <div className="border-b border-[#C9A84C]/30 py-8 md:border-b-0 md:border-r md:py-0 md:pr-12">
-              <p className="font-display text-2xl tracking-wider text-[#1A3A2A]">
-                FREE SHIPPING
-              </p>
-              <p className="mt-1 text-sm text-[#1A1A1A]/50">On orders $75+</p>
-            </div>
-            <div className="border-b border-[#C9A84C]/30 py-8 md:border-b-0 md:border-r md:py-0 md:px-12">
-              <p className="font-display text-2xl tracking-wider text-[#1A3A2A]">
-                UPF 50+
-              </p>
-              <p className="mt-1 text-sm text-[#1A1A1A]/50">Performance Fabrics</p>
-            </div>
-            <div className="py-8 md:py-0 md:pl-12">
-              <p className="font-display text-2xl tracking-wider text-[#1A3A2A]">
-                THE 19TH HOLE
-              </p>
-              <p className="mt-1 text-sm text-[#1A1A1A]/50">Crafted for after the round</p>
+          <div className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 divide-y divide-[#C9A84C]/30 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+              <div className="flex flex-col items-center py-8 text-center sm:items-start sm:py-0 sm:pr-12 sm:text-left">
+                <p className="font-display text-2xl tracking-wider text-[#1A3A2A]">FREE SHIPPING</p>
+                <p className="mt-1 text-sm text-[#1A1A1A]/50">On orders $75+</p>
+              </div>
+              <div className="flex flex-col items-center py-8 text-center sm:items-start sm:py-0 sm:px-12 sm:text-left">
+                <p className="font-display text-2xl tracking-wider text-[#1A3A2A]">UPF 50+</p>
+                <p className="mt-1 text-sm text-[#1A1A1A]/50">Performance Fabrics</p>
+              </div>
+              <div className="flex flex-col items-center py-8 text-center sm:items-start sm:py-0 sm:pl-12 sm:text-left">
+                <p className="font-display text-2xl tracking-wider text-[#1A3A2A]">THE 19TH HOLE</p>
+                <p className="mt-1 text-sm text-[#1A1A1A]/50">Crafted for after the round</p>
+              </div>
             </div>
           </div>
         </section>
