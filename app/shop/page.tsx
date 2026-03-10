@@ -16,23 +16,26 @@ export default function ShopPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-b from-[#0D1F17] to-[#1A3A2A] px-6 py-20 text-center text-white">
-        <h1 className="font-display text-5xl tracking-wider md:text-6xl">
-          SHOP
-        </h1>
-        <p className="mt-4 text-sm uppercase tracking-[0.2em] text-[#C9A84C]">
-          Premium essentials for the modern golfer
-        </p>
+      {/* Hero Banner */}
+      <section className="bg-[#0D1F17] px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <h1 className="font-display text-6xl tracking-wider text-white md:text-8xl">
+            THE COLLECTION
+          </h1>
+          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[#C9A84C]">
+            Premium essentials for the modern golfer
+          </p>
+        </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12">
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-2">
+      <section className="mx-auto max-w-7xl px-6 py-14">
+        {/* Category Filters */}
+        <div className="flex flex-wrap gap-3">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`rounded-full px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
+              className={`px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-all ${
                 active === cat
                   ? "bg-[#1A3A2A] text-white"
                   : "border border-[#1A3A2A]/20 text-[#1A3A2A] hover:border-[#1A3A2A] hover:bg-[#1A3A2A]/5"
@@ -44,7 +47,7 @@ export default function ShopPage() {
         </div>
 
         {/* Product Grid */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
