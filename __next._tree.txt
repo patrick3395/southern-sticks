@@ -1,4 +1,4 @@
-:HL["/southern-sticks/_next/static/chunks/72b35080a1d8b999.css","style"]
+:HL["/southern-sticks/_next/static/chunks/b76c5261ea2b59dc.css","style"]
 :HL["/southern-sticks/_next/static/media/38df7484fe560b25-s.p.60f15535.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/southern-sticks/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/southern-sticks/_next/static/media/f5031e7b18bdfbb3-s.p.3dcbbce0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -7,4 +7,4 @@
 :HL["https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1920&q=85&auto=format&fit=crop","image"]
 :HL["/southern-sticks/images/hat-classic-mockup.jpg","image"]
 :HL["/southern-sticks/images/polo-navy-stripe-model.jpg","image"]
-0:{"buildId":"vDx6fGJefkZr2ySx7QKxa","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"ev00Sj9YuLqY7baRl43ds","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
