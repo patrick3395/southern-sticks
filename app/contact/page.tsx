@@ -17,13 +17,22 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Hero Banner */}
-      <section className="bg-[#0D1F17] px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl">
-          <h1 className="font-display text-6xl tracking-wider text-white md:text-8xl">
+      {/* Hero Banner — golden hour silhouette */}
+      <section className="relative flex min-h-[420px] items-end overflow-hidden px-6 pb-16 md:min-h-[500px]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=1920&q=85&auto=format&fit=crop"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1F17]/90 via-[#0D1F17]/50 to-transparent" />
+        <div className="relative z-10 mx-auto w-full max-w-7xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#C9A84C]">We&apos;d love to hear from you</p>
+          <h1 className="mt-3 font-display text-7xl tracking-wider text-white md:text-9xl">
             GET IN TOUCH
           </h1>
-          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[#C9A84C]">
+          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-white/60">
             Questions, feedback, or just want to talk golf?
           </p>
         </div>
