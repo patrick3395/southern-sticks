@@ -72,11 +72,11 @@ body {
 @keyframes heroSlideIn {
   from {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -165,11 +165,59 @@ body {
 
 /* Diagonal clip for hero bottom */
 .hero-clip {
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
 }
 
 @media (min-width: 768px) {
   .hero-clip {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   }
+}
+
+/* Masonry grid for lookbook */
+.masonry-grid {
+  columns: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+  }
+}
+
+.masonry-grid > * {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+/* Accordion animation */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content > div {
+  overflow: hidden;
+}
+
+/* Best sellers horizontal scroll */
+.best-sellers-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.best-sellers-scroll::-webkit-scrollbar {
+  display: none;
 }

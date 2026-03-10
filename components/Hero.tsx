@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { img } from "@/lib/image";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -12,80 +11,72 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative">
-      {/* Split Hero */}
-      <div className="flex min-h-[90vh] flex-col md:flex-row">
-        {/* Mobile: Image on top */}
-        <div className="relative h-[40vh] md:hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={img("/images/polo-navy-stripe-model.jpg")}
-            alt="Southern Sticks lifestyle"
-            className="absolute inset-0 h-full w-full object-cover object-top"
-          />
-          <div className="absolute left-0 top-0 h-full w-1 bg-[#C9A84C]" />
-        </div>
+    <section className="relative hero-clip">
+      {/* Full-bleed background */}
+      <div
+        className="relative flex min-h-screen items-center justify-center"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1920&q=85&auto=format&fit=crop)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
-        {/* LEFT: Dark green editorial text */}
-        <div className="flex flex-1 flex-col justify-center bg-[#0D1F17] px-8 py-16 md:px-16 lg:px-24">
-          <div className="max-w-md">
-            <h1 className="font-display leading-[0.9] tracking-wide text-white">
-              <span
-                className={`hero-line block text-[100px] md:text-[140px] lg:text-[180px] ${mounted ? "hero-line-animate" : ""}`}
-              >
-                PLAY
-              </span>
-              <span
-                className={`hero-line text-outline block text-[100px] md:text-[140px] lg:text-[180px] ${mounted ? "hero-line-animate" : ""}`}
-                style={{ animationDelay: "200ms" }}
-              >
-                WITH
-              </span>
-              <span
-                className={`hero-line block text-[100px] md:text-[140px] lg:text-[180px] ${mounted ? "hero-line-animate" : ""}`}
-                style={{ animationDelay: "400ms" }}
-              >
-                PRIDE
-              </span>
-            </h1>
-            <div
-              className={`mt-10 flex flex-col gap-4 sm:flex-row ${mounted ? "hero-line hero-line-animate" : ""}`}
-              style={{ animationDelay: "600ms" }}
+        {/* Centered text content */}
+        <div className="relative z-10 mx-auto max-w-5xl px-6 pt-20 text-center">
+          {/* Eyebrow */}
+          <p
+            className={`hero-line text-xs font-semibold uppercase tracking-[0.4em] text-[#C9A84C] ${mounted ? "hero-line-animate" : ""}`}
+          >
+            EST. 2024 &mdash; SOUTHERN STICKS
+          </p>
+
+          {/* Main headline */}
+          <h1 className="mt-6 font-display leading-[0.9] tracking-wide text-white">
+            <span
+              className={`hero-line block text-8xl md:text-[120px] lg:text-[160px] ${mounted ? "hero-line-animate" : ""}`}
+              style={{ animationDelay: "200ms" }}
             >
-              <Link
-                href="/shop"
-                className="inline-block bg-[#C9A84C] px-10 py-4 text-center text-xs font-bold tracking-[0.2em] text-[#0D1F17] transition-colors hover:bg-[#d4b65e]"
-              >
-                SHOP THE COLLECTION
-              </Link>
-              <Link
-                href="/about"
-                className="inline-block border border-white/40 px-10 py-4 text-center text-xs font-bold tracking-[0.2em] text-white transition-colors hover:border-white hover:bg-white/10"
-              >
-                OUR STORY
-              </Link>
-            </div>
+              PLAY WITH
+            </span>
+            <span
+              className={`hero-line block text-8xl md:text-[120px] lg:text-[160px] ${mounted ? "hero-line-animate" : ""}`}
+              style={{ animationDelay: "400ms" }}
+            >
+              PRIDE
+            </span>
+          </h1>
+
+          {/* Subline */}
+          <p
+            className={`hero-line mx-auto mt-6 max-w-lg text-sm uppercase tracking-[0.25em] text-[#E8DCC8] md:text-base ${mounted ? "hero-line-animate" : ""}`}
+            style={{ animationDelay: "500ms" }}
+          >
+            Premium Golf Apparel for the Modern Gentleman
+          </p>
+
+          {/* CTAs */}
+          <div
+            className={`mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center ${mounted ? "hero-line hero-line-animate" : "hero-line"}`}
+            style={{ animationDelay: "700ms" }}
+          >
+            <Link
+              href="/shop"
+              className="inline-block bg-[#C9A84C] px-10 py-4 text-xs font-bold tracking-[0.2em] text-[#0D1F17] transition-colors hover:bg-[#d4b65e]"
+            >
+              SHOP THE COLLECTION
+            </Link>
+            <Link
+              href="/about"
+              className="inline-block border border-white/50 px-10 py-4 text-xs font-bold tracking-[0.2em] text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              OUR STORY
+            </Link>
           </div>
         </div>
-
-        {/* RIGHT: Full-bleed lifestyle image (desktop only) */}
-        <div className="relative hidden flex-1 md:block">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={img("/images/polo-navy-stripe-model.jpg")}
-            alt="Southern Sticks lifestyle"
-            className={`absolute inset-0 h-full w-full object-cover object-top ${mounted ? "hero-image-animate" : ""}`}
-          />
-          {/* Gold left border accent */}
-          <div className="absolute left-0 top-0 h-full w-1 bg-[#C9A84C]" />
-        </div>
-      </div>
-
-      {/* Bottom caption bar */}
-      <div className="border-t border-[#C9A84C]/30 bg-[#0D1F17] px-6 py-4">
-        <p className="text-center text-[10px] font-medium uppercase tracking-[0.4em] text-[#C9A84C]/70">
-          Est. &mdash; Southern Sticks &mdash; Premium Golf Apparel
-        </p>
       </div>
     </section>
   );

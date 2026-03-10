@@ -26,7 +26,7 @@ export default function AddToBag() {
   };
 
   return (
-    <div className="mt-8">
+    <div id="add-to-bag" className="mt-8">
       {/* Size Selector */}
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]">
         Size

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { img } from "@/lib/image";
 import Search from "@/components/Search";
 import CartIcon from "@/components/CartIcon";
@@ -15,6 +16,8 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -22,12 +25,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const transparent = isHome && !scrolled;
+
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
-          : "bg-transparent"
+          : transparent
+            ? "bg-transparent"
+            : "bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
@@ -37,9 +44,13 @@ export default function Navbar() {
           <img
             src={img("/images/logo-patch.jpg")}
             alt="Southern Sticks"
-            className="h-[60px] w-[60px] object-contain"
+            className="h-[60px] w-[60px] rounded-full object-contain"
           />
-          <span className="font-display text-xl tracking-wider text-[#1A3A2A]">
+          <span
+            className={`font-display text-xl tracking-wider transition-colors duration-300 ${
+              transparent ? "text-white" : "text-[#1A3A2A]"
+            }`}
+          >
             SOUTHERN STICKS
           </span>
         </Link>
@@ -50,7 +61,11 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs font-medium tracking-[0.15em] text-[#1A1A1A] transition-colors hover:text-[#1A3A2A]"
+              className={`text-xs font-medium tracking-[0.15em] transition-colors ${
+                transparent
+                  ? "text-white/90 hover:text-white"
+                  : "text-[#1A1A1A] hover:text-[#1A3A2A]"
+              }`}
             >
               {link.label}
             </Link>
@@ -59,7 +74,11 @@ export default function Navbar() {
           <CartIcon />
           <Link
             href="/shop"
-            className="rounded-full bg-[#1A3A2A] px-6 py-2 text-xs font-semibold tracking-[0.15em] text-white transition-colors hover:bg-[#0D1F17]"
+            className={`rounded-full px-6 py-2 text-xs font-semibold tracking-[0.15em] transition-colors ${
+              transparent
+                ? "bg-white/20 text-white backdrop-blur-sm hover:bg-white/30"
+                : "bg-[#1A3A2A] text-white hover:bg-[#0D1F17]"
+            }`}
           >
             SHOP NOW
           </Link>
@@ -74,13 +93,19 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block h-0.5 w-6 bg-[#1A3A2A] transition-all duration-300 ${open ? "translate-y-2 rotate-45" : ""}`}
+              className={`block h-0.5 w-6 transition-all duration-300 ${
+                transparent && !open ? "bg-white" : "bg-[#1A3A2A]"
+              } ${open ? "translate-y-2 rotate-45" : ""}`}
             />
             <span
-              className={`block h-0.5 w-6 bg-[#1A3A2A] transition-all duration-300 ${open ? "opacity-0" : ""}`}
+              className={`block h-0.5 w-6 transition-all duration-300 ${
+                transparent && !open ? "bg-white" : "bg-[#1A3A2A]"
+              } ${open ? "opacity-0" : ""}`}
             />
             <span
-              className={`block h-0.5 w-6 bg-[#1A3A2A] transition-all duration-300 ${open ? "-translate-y-2 -rotate-45" : ""}`}
+              className={`block h-0.5 w-6 transition-all duration-300 ${
+                transparent && !open ? "bg-white" : "bg-[#1A3A2A]"
+              } ${open ? "-translate-y-2 -rotate-45" : ""}`}
             />
           </button>
         </div>
@@ -92,7 +117,7 @@ export default function Navbar() {
           open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-[#1A3A2A]/10 px-6 pb-4">
+        <div className="border-t border-[#1A3A2A]/10 bg-white px-6 pb-4">
           {links.map((link) => (
             <Link
               key={link.href}
