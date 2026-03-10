@@ -9,15 +9,15 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // Hats
+  // Hats — real product mockup for first hat, Unsplash for others
   {
     id: 1,
     name: 'The Classic Navy Rope Hat',
     slug: 'the-classic-navy-rope-hat',
     category: 'hats',
     price: 45,
-    description: 'Our signature rope hat in deep navy. A timeless silhouette with a structured crown and classic rope detail across the brim. Built for the course and beyond.',
-    image: 'https://picsum.photos/seed/hat1/800/800',
+    description: 'Our signature rope hat in deep navy. A timeless silhouette with a structured crown and classic rope detail across the brim. The crossed-clubs "S" emblem, built for the course and worn everywhere.',
+    image: '/images/hat-mockup.jpg',
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const products: Product[] = [
     category: 'hats',
     price: 40,
     description: 'Lightweight, moisture-wicking performance fabric with a pre-curved brim and adjustable snapback. From the range to the clubhouse.',
-    image: 'https://picsum.photos/seed/hat2/800/800',
+    image: '/images/hat-mockup.jpg',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const products: Product[] = [
     category: 'hats',
     price: 38,
     description: 'Full-brim sun protection with Southern style. Packable, breathable, and ready for 18 under the summer sun.',
-    image: 'https://picsum.photos/seed/hat3/800/800',
+    image: '/images/hat-mockup.jpg',
   },
   // Polos
   {
@@ -45,7 +45,7 @@ export const products: Product[] = [
     category: 'polos',
     price: 85,
     description: 'Classic horizontal stripes meet modern performance fabric. Four-way stretch, UPF 50+ protection, and a tailored fit that moves with your swing.',
-    image: 'https://picsum.photos/seed/polo1/800/800',
+    image: 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 5,
@@ -53,8 +53,8 @@ export const products: Product[] = [
     slug: 'the-blue-ridge-polo',
     category: 'polos',
     price: 85,
-    description: 'Inspired by the mountain courses of the Carolinas. Soft pima cotton blend with a subtle texture and a relaxed Southern fit.',
-    image: 'https://picsum.photos/seed/polo2/800/800',
+    description: 'A blue and white stripe polo that channels the clean lines of mountain-top courses. Moisture-wicking, quick-dry, and cut for movement.',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 6,
@@ -62,8 +62,8 @@ export const products: Product[] = [
     slug: 'the-dot-performance-polo',
     category: 'polos',
     price: 95,
-    description: 'Micro-dot print on premium performance jersey. Moisture-wicking, quick-dry, and styled for the player who appreciates the details.',
-    image: 'https://picsum.photos/seed/polo3/800/800',
+    description: 'Subtle tonal dot texture on our premium performance fabric. The most refined polo in the lineup — office to 18th hole.',
+    image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 7,
@@ -71,8 +71,8 @@ export const products: Product[] = [
     slug: 'the-solid-performance-polo',
     category: 'polos',
     price: 75,
-    description: 'The foundation of every golfer\'s wardrobe. Clean, solid color in our signature performance fabric with a three-button placket.',
-    image: 'https://picsum.photos/seed/polo4/800/800',
+    description: 'No fuss, all performance. Our core polo in solid deep navy. If it isn\'t broke, don\'t fix it.',
+    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80&auto=format&fit=crop',
   },
   // Shirts
   {
@@ -81,8 +81,8 @@ export const products: Product[] = [
     slug: 'the-sunday-linen-shirt',
     category: 'shirts',
     price: 95,
-    description: 'For the round that turns into brunch. Pure linen, relaxed fit, and effortless Southern style from the first tee to the last toast.',
-    image: 'https://picsum.photos/seed/shirt1/800/800',
+    description: 'For the round that bleeds into brunch. Relaxed linen weave, chest pocket, and an easy drape that\'s impossible to overdress.',
+    image: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 9,
@@ -90,8 +90,8 @@ export const products: Product[] = [
     slug: 'the-19th-hole-button-down',
     category: 'shirts',
     price: 90,
-    description: 'A post-round essential. Wrinkle-resistant cotton with a button-down collar and a fit that takes you from the course to dinner.',
-    image: 'https://picsum.photos/seed/shirt2/800/800',
+    description: 'The shirt you\'re wearing when you\'re telling your best round story. Crisp cotton poplin, subtle stripe, clubhouse-ready.',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
   },
   // Accessories
   {
@@ -100,8 +100,8 @@ export const products: Product[] = [
     slug: 'logo-headcover',
     category: 'accessories',
     price: 35,
-    description: 'Premium leather headcover embossed with the Southern Sticks crossed clubs. Fits drivers up to 460cc.',
-    image: 'https://picsum.photos/seed/acc1/800/800',
+    description: 'Protect your driver in style. Knit construction with the embroidered crossed-clubs "S" logo. Fits standard drivers up to 460cc.',
+    image: '/images/hat-mockup.jpg',
   },
   {
     id: 11,
@@ -109,16 +109,16 @@ export const products: Product[] = [
     slug: 'ball-marker-set',
     category: 'accessories',
     price: 25,
-    description: 'Set of three brass ball markers featuring the Southern Sticks crest. Packaged in a custom leather pouch.',
-    image: 'https://picsum.photos/seed/acc2/800/800',
+    description: 'Set of 3 enamel ball markers. The crossed-clubs logo in navy/white, forest green/gold, and all black. Mark your spot in style.',
+    image: '/images/hat-mockup.jpg',
   },
   {
     id: 12,
-    name: 'Belt',
+    name: 'The Course Belt',
     slug: 'belt',
     category: 'accessories',
     price: 55,
-    description: 'Full-grain leather belt with a brushed nickel buckle stamped with crossed clubs. The finishing touch to any round.',
-    image: 'https://picsum.photos/seed/acc3/800/800',
+    description: 'Full-grain leather with a brushed brass buckle. Subtle embossed Southern Sticks logo on the tail. Fits 28"–42".',
+    image: '/images/hat-mockup.jpg',
   },
 ];

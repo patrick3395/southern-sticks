@@ -59,7 +59,7 @@ export default function AboutPage() {
       {/* Full-Width Image */}
       <div className="relative h-[400px] w-full">
         <Image
-          src="https://picsum.photos/seed/about1/1600/600"
+          src="https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=1600&q=85&auto=format&fit=crop"
           alt="Golf course landscape"
           fill
           className="object-cover"

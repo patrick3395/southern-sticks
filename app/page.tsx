@@ -13,17 +13,20 @@ const categories = [
   {
     name: "HATS",
     href: "/shop",
-    image: "https://picsum.photos/seed/golfhats/800/600",
+    // Golfer walking the fairway — warm morning light
+    image: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "POLOS",
     href: "/shop",
-    image: "https://picsum.photos/seed/golfpolos/800/600",
+    // Aerial golf course green
+    image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "SHIRTS",
     href: "/shop",
-    image: "https://picsum.photos/seed/golfshirts/800/600",
+    // Morning mist on the course
+    image: "https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80&auto=format&fit=crop",
   },
 ];
 

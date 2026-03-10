@@ -2,19 +2,17 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="hero-clip relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-b from-[#0D1F17] to-[#1A3A2A] px-6 text-white">
-      {/* Background golf flag watermark */}
-      <svg
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.04]"
-        viewBox="0 0 400 600"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <line x1="200" y1="50" x2="200" y2="520" stroke="white" strokeWidth="4" />
-        <polygon points="200,50 320,100 200,150" fill="white" />
-        <circle cx="200" cy="540" r="30" fill="none" stroke="white" strokeWidth="4" />
-      </svg>
+    <section className="hero-clip relative flex min-h-screen items-center justify-center overflow-hidden px-6 text-white">
+      {/* Hero background — real golf shot */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1920&q=85&auto=format&fit=crop"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      {/* Dark green overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1F17]/80 via-[#0D1F17]/60 to-[#0D1F17]/80" />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <h1 className="font-display text-7xl leading-none tracking-wide text-white md:text-8xl lg:text-9xl">
