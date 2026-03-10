@@ -3,9 +3,65 @@
 @theme inline {
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+  --font-display: var(--font-display);
+
+  --color-forest: #1A3A2A;
+  --color-forest-dark: #0D1F17;
+  --color-gold: #C9A84C;
+  --color-warm-white: #F5F0E8;
+  --color-text-dark: #1A1A1A;
 }
 
 body {
   background: #ffffff;
-  color: #1b2a4a;
+  color: #1A1A1A;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A3A2A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D1F17;
+}
+
+/* Selection color */
+::selection {
+  background: #C9A84C;
+  color: #0D1F17;
+}
+
+/* Diagonal clip for hero bottom */
+.hero-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+@media (min-width: 768px) {
+  .hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
 }

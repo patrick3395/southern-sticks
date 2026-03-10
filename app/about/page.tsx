@@ -1,38 +1,62 @@
 import Image from "next/image";
 
+const values = [
+  {
+    title: "QUALITY FIRST",
+    description:
+      "Every stitch, every fabric, every detail — obsessively curated for the golfer who demands the best.",
+  },
+  {
+    title: "COURSE TO CLUBHOUSE",
+    description:
+      "Apparel that performs on the fairway and looks sharp at the 19th hole. No compromise.",
+  },
+  {
+    title: "SOUTHERN ROOTS",
+    description:
+      "Born on the courses of the South, where tradition, style, and a firm handshake are non-negotiable.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
-      {/* Header */}
-      <section className="bg-[#1B2A4A] px-6 py-16 text-center text-white">
-        <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
-          Our Story
-        </h1>
-        <p className="mt-4 text-white/70">
-          Where Southern tradition meets the modern game.
-        </p>
+      {/* Dark Green Hero Banner */}
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-gradient-to-b from-[#0D1F17] to-[#1A3A2A] px-6 text-center text-white">
+        <div className="relative z-10">
+          <h1 className="font-display text-5xl tracking-wider md:text-7xl">
+            BUILT FOR THE COURSE.
+          </h1>
+          <h1 className="mt-2 font-display text-5xl tracking-wider md:text-7xl">
+            WORN EVERYWHERE.
+          </h1>
+          <p className="mt-6 text-sm uppercase tracking-[0.3em] text-[#C9A84C]">
+            Our Story
+          </p>
+        </div>
       </section>
 
       {/* Brand Story */}
-      <section className="mx-auto max-w-3xl px-6 py-20">
-        <h2 className="font-serif text-2xl font-bold text-[#1B2A4A]">
-          Born on the Fairways
+      <section className="mx-auto max-w-3xl px-6 py-24">
+        <h2 className="font-display text-3xl tracking-wider text-[#1A3A2A]">
+          BORN ON THE FAIRWAYS
         </h2>
-        <p className="mt-6 leading-relaxed text-[#1B2A4A]/70">
+        <div className="mt-6 h-px w-16 bg-[#C9A84C]" />
+        <p className="mt-8 leading-relaxed text-[#1A1A1A]/70">
           Southern Sticks was founded with a simple belief: the game of golf
-          deserves apparel that honors its traditions while moving forward. Rooted
-          in the culture of Southern country clubs — where a firm handshake, a
-          well-kept course, and good style are non-negotiable — we set out to
-          create a brand that feels as good as it looks.
+          deserves apparel that honors its traditions while moving forward.
+          Rooted in the culture of Southern country clubs — where a firm
+          handshake, a well-kept course, and good style are non-negotiable — we
+          set out to create a brand that feels as good as it looks.
         </p>
-        <p className="mt-4 leading-relaxed text-[#1B2A4A]/70">
-          Every piece in our collection is designed for the golfer who cares about
-          the details. From the weight of a polo collar to the curve of a hat
-          brim, we sweat the small stuff so you can focus on your swing.
+        <p className="mt-4 leading-relaxed text-[#1A1A1A]/70">
+          Every piece in our collection is designed for the golfer who cares
+          about the details. From the weight of a polo collar to the curve of a
+          hat brim, we sweat the small stuff so you can focus on your swing.
         </p>
       </section>
 
-      {/* Image Break */}
+      {/* Full-Width Image */}
       <div className="relative h-[400px] w-full">
         <Image
           src="https://picsum.photos/seed/about1/1600/600"
@@ -41,39 +65,48 @@ export default function AboutPage() {
           className="object-cover"
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-[#0D1F17]/30" />
       </div>
 
-      {/* Mission */}
-      <section className="bg-[#F8F6F2] px-6 py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="font-serif text-2xl font-bold text-[#1B2A4A]">
-            Our Mission
+      {/* Values Section */}
+      <section className="bg-[#F5F0E8] px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-center font-display text-3xl tracking-wider text-[#1A3A2A]">
+            WHAT WE STAND FOR
           </h2>
-          <p className="mt-6 leading-relaxed text-[#1B2A4A]/70">
-            To outfit the modern Southern golfer with apparel that bridges
-            heritage and performance. We believe in quality over quantity,
-            timeless style over trends, and that the best round of golf is the
-            one played with pride and good company.
-          </p>
+          <div className="mt-14 grid grid-cols-1 gap-12 md:grid-cols-3">
+            {values.map((v) => (
+              <div key={v.title}>
+                <h3 className="font-display text-xl tracking-wider text-[#1A3A2A]">
+                  {v.title}
+                </h3>
+                <div className="mt-3 h-px w-10 bg-[#C9A84C]" />
+                <p className="mt-4 text-sm leading-relaxed text-[#1A1A1A]/60">
+                  {v.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Founders Note */}
-      <section className="mx-auto max-w-3xl px-6 py-20">
-        <h2 className="font-serif text-2xl font-bold text-[#1B2A4A]">
-          A Note from the Founders
+      <section className="mx-auto max-w-3xl px-6 py-24">
+        <h2 className="font-display text-3xl tracking-wider text-[#1A3A2A]">
+          A NOTE FROM THE FOUNDERS
         </h2>
-        <p className="mt-6 leading-relaxed text-[#1B2A4A]/70">
+        <div className="mt-6 h-px w-16 bg-[#C9A84C]" />
+        <p className="mt-8 leading-relaxed text-[#1A1A1A]/70">
           We grew up on Southern courses where the dress code was just as
           important as your handicap. Where a well-made polo and a sharp hat
-          weren&apos;t just expected — they were a point of pride. Southern Sticks
-          is our love letter to that culture.
+          weren&apos;t just expected — they were a point of pride. Southern
+          Sticks is our love letter to that culture.
         </p>
-        <p className="mt-4 leading-relaxed text-[#1B2A4A]/70">
-          Whether you&apos;re teeing off at dawn or settling in at the 19th hole,
-          we hope our gear makes you feel like you belong. Because you do.
+        <p className="mt-4 leading-relaxed text-[#1A1A1A]/70">
+          Whether you&apos;re teeing off at dawn or settling in at the 19th
+          hole, we hope our gear makes you feel like you belong. Because you do.
         </p>
-        <p className="mt-8 font-serif text-lg font-semibold text-[#1B2A4A]">
+        <p className="mt-8 font-serif text-lg font-bold text-[#1A3A2A]">
           — The Southern Sticks Team
         </p>
       </section>

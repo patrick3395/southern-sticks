@@ -8,13 +8,12 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#1B2A4A] px-6 py-16 text-center text-white">
-        <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
-          Get in Touch
+      <section className="bg-gradient-to-b from-[#0D1F17] to-[#1A3A2A] px-6 py-20 text-center text-white">
+        <h1 className="font-display text-5xl tracking-wider md:text-6xl">
+          GET IN TOUCH
         </h1>
-        <p className="mt-4 text-white/70">
-          Questions, feedback, or just want to talk golf? We&apos;d love to hear
-          from you.
+        <p className="mt-4 text-sm uppercase tracking-[0.2em] text-[#C9A84C]">
+          Questions, feedback, or just want to talk golf?
         </p>
       </section>
 
@@ -22,10 +21,11 @@ export default function ContactPage() {
       <section className="mx-auto max-w-xl px-6 py-20">
         {submitted ? (
           <div className="text-center">
-            <h2 className="font-serif text-2xl font-bold text-[#1B2A4A]">
-              Message Sent
+            <h2 className="font-display text-3xl tracking-wider text-[#1A3A2A]">
+              MESSAGE SENT
             </h2>
-            <p className="mt-4 text-[#1B2A4A]/70">
+            <div className="mx-auto mt-4 h-px w-12 bg-[#C9A84C]" />
+            <p className="mt-6 text-[#1A1A1A]/60">
               Thanks for reaching out. We&apos;ll get back to you soon.
             </p>
           </div>
@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-[#1B2A4A]"
+                className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
               >
                 Name
               </label>
@@ -49,14 +49,14 @@ export default function ContactPage() {
                 id="name"
                 name="name"
                 required
-                className="mt-2 w-full rounded border border-[#1B2A4A]/20 px-4 py-3 text-sm text-[#1B2A4A] outline-none transition-colors focus:border-[#1B2A4A]"
+                className="mt-2 w-full border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
               />
             </div>
 
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-[#1B2A4A]"
+                className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
               >
                 Email
               </label>
@@ -65,14 +65,14 @@ export default function ContactPage() {
                 id="email"
                 name="email"
                 required
-                className="mt-2 w-full rounded border border-[#1B2A4A]/20 px-4 py-3 text-sm text-[#1B2A4A] outline-none transition-colors focus:border-[#1B2A4A]"
+                className="mt-2 w-full border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
               />
             </div>
 
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-[#1B2A4A]"
+                className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
               >
                 Message
               </label>
@@ -81,13 +81,13 @@ export default function ContactPage() {
                 name="message"
                 rows={5}
                 required
-                className="mt-2 w-full resize-none rounded border border-[#1B2A4A]/20 px-4 py-3 text-sm text-[#1B2A4A] outline-none transition-colors focus:border-[#1B2A4A]"
+                className="mt-2 w-full resize-none border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#1B2A4A] py-4 text-sm font-semibold tracking-widest text-white transition-colors hover:bg-[#1B2A4A]/90"
+              className="w-full bg-[#1A3A2A] py-5 font-display text-lg tracking-wider text-white transition-colors hover:bg-[#0D1F17]"
             >
               SEND MESSAGE
             </button>

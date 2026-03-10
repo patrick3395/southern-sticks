@@ -16,12 +16,12 @@ export default function ShopPage() {
 
   return (
     <>
-      <section className="bg-[#1B2A4A] px-6 py-16 text-center text-white">
-        <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
-          Shop
+      <section className="bg-gradient-to-b from-[#0D1F17] to-[#1A3A2A] px-6 py-20 text-center text-white">
+        <h1 className="font-display text-5xl tracking-wider md:text-6xl">
+          SHOP
         </h1>
-        <p className="mt-4 text-white/70">
-          Southern-rooted essentials for the modern golfer.
+        <p className="mt-4 text-sm uppercase tracking-[0.2em] text-[#C9A84C]">
+          Premium essentials for the modern golfer
         </p>
       </section>
 
@@ -32,10 +32,10 @@ export default function ShopPage() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`rounded-full px-5 py-2 text-sm font-medium capitalize tracking-wide transition-colors ${
+              className={`rounded-full px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
                 active === cat
-                  ? "bg-[#1B2A4A] text-white"
-                  : "bg-[#F8F6F2] text-[#1B2A4A] hover:bg-[#1B2A4A]/10"
+                  ? "bg-[#1A3A2A] text-white"
+                  : "border border-[#1A3A2A]/20 text-[#1A3A2A] hover:border-[#1A3A2A] hover:bg-[#1A3A2A]/5"
               }`}
             >
               {cat}
@@ -44,7 +44,7 @@ export default function ShopPage() {
         </div>
 
         {/* Product Grid */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

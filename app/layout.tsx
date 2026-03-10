@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Bebas_Neue, Libre_Baskerville, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   variable: "--font-serif",
   subsets: ["latin"],
   display: "swap",
@@ -17,9 +26,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Southern Sticks | Golf Lifestyle Brand",
+  title: "Southern Sticks | Premium Golf Apparel",
   description:
-    "Southern-rooted golf apparel for the modern player. Classic style, modern performance.",
+    "Premium golf apparel for the modern gentleman. Performance meets country club style.",
 };
 
 export default function RootLayout({
@@ -30,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable} font-sans antialiased`}
+        className={`${bebasNeue.variable} ${libreBaskerville.variable} ${inter.variable} font-sans antialiased`}
       >
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

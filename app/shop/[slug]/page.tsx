@@ -22,14 +22,14 @@ export default async function ProductPage({
     <section className="mx-auto max-w-7xl px-6 py-16">
       <Link
         href="/shop"
-        className="text-sm text-[#1B2A4A]/60 transition-colors hover:text-[#1B2A4A]"
+        className="text-sm font-medium text-[#1A3A2A]/50 transition-colors hover:text-[#1A3A2A]"
       >
         &larr; Back to Shop
       </Link>
 
       <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-2">
         {/* Product Image */}
-        <div className="relative aspect-square overflow-hidden rounded-lg bg-[#F8F6F2]">
+        <div className="relative aspect-square overflow-hidden bg-[#F5F0E8]">
           <Image
             src={product.image}
             alt={product.name}
@@ -42,16 +42,17 @@ export default async function ProductPage({
 
         {/* Product Info */}
         <div className="flex flex-col justify-center">
-          <p className="text-xs font-medium uppercase tracking-widest text-[#7BA7D4]">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A84C]">
             {product.category}
           </p>
-          <h1 className="mt-2 font-serif text-3xl font-bold text-[#1B2A4A] md:text-4xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-[#1A1A1A] md:text-4xl">
             {product.name}
           </h1>
-          <p className="mt-4 text-2xl font-semibold text-[#1B2A4A]">
+          <p className="mt-4 text-2xl font-semibold text-[#C9A84C]">
             ${product.price}
           </p>
-          <p className="mt-6 leading-relaxed text-[#1B2A4A]/70">
+          <div className="mt-6 h-px w-12 bg-[#C9A84C]" />
+          <p className="mt-6 leading-relaxed text-[#1A1A1A]/60">
             {product.description}
           </p>
 

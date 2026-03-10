@@ -7,78 +7,67 @@ export default function Logo({ className = "h-8 w-8" }: { className?: string }) 
       className={className}
       aria-label="Southern Sticks logo"
     >
-      {/* Left club (bottom-left to top-right) */}
+      {/* Left club */}
       <line
-        x1="15"
-        y1="85"
-        x2="85"
-        y2="15"
+        x1="20"
+        y1="80"
+        x2="80"
+        y2="20"
         stroke="currentColor"
-        strokeWidth="6"
+        strokeWidth="5"
         strokeLinecap="round"
       />
-      {/* Left club head */}
       <ellipse
-        cx="15"
-        cy="85"
-        rx="8"
-        ry="5"
-        transform="rotate(-45 15 85)"
-        fill="currentColor"
-      />
-      {/* Left club grip */}
-      <rect
-        x="79"
-        y="8"
-        width="12"
-        height="4"
-        rx="2"
-        transform="rotate(-45 79 8)"
+        cx="20"
+        cy="80"
+        rx="7"
+        ry="4"
+        transform="rotate(-45 20 80)"
         fill="currentColor"
       />
 
-      {/* Right club (bottom-right to top-left) */}
+      {/* Right club */}
       <line
-        x1="85"
-        y1="85"
-        x2="15"
-        y2="15"
+        x1="80"
+        y1="80"
+        x2="20"
+        y2="20"
         stroke="currentColor"
-        strokeWidth="6"
+        strokeWidth="5"
         strokeLinecap="round"
       />
-      {/* Right club head */}
       <ellipse
-        cx="85"
-        cy="85"
-        rx="8"
-        ry="5"
-        transform="rotate(45 85 85)"
-        fill="currentColor"
-      />
-      {/* Right club grip */}
-      <rect
-        x="9"
-        y="8"
-        width="12"
-        height="4"
-        rx="2"
-        transform="rotate(45 9 8)"
+        cx="80"
+        cy="80"
+        rx="7"
+        ry="4"
+        transform="rotate(45 80 80)"
         fill="currentColor"
       />
 
-      {/* "S" letter overlaid at center */}
-      <text
-        x="50"
-        y="58"
-        textAnchor="middle"
+      {/* Golf flag */}
+      <line
+        x1="50"
+        y1="15"
+        x2="50"
+        y2="55"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <polygon
+        points="50,15 70,22 50,29"
         fill="currentColor"
-        fontSize="36"
-        fontFamily="Georgia, serif"
-        fontWeight="bold"
-      >
-        S
-      </text>
+      />
+      {/* Hole circle */}
+      <circle
+        cx="50"
+        cy="58"
+        r="4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
     </svg>
   );
 }
