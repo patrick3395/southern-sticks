@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { img } from "@/lib/image";
 import type { Product } from "@/data/products";
 
 export default function ProductCard({
@@ -16,12 +16,11 @@ export default function ProductCard({
     >
       {/* Image */}
       <div className="relative aspect-[3/4] overflow-hidden bg-[#F5F0E8]">
-        <Image
-          src={product.image}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={img(product.image)}
           alt={product.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {/* Category pill */}
         <span className="absolute left-3 top-3 bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#1A3A2A]">

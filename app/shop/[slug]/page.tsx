@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
+import { img } from "@/lib/image";
 import AddToBag from "./AddToBag";
 
 export function generateStaticParams() {
@@ -30,13 +30,11 @@ export default async function ProductPage({
       <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-2">
         {/* Product Image */}
         <div className="relative aspect-square overflow-hidden bg-[#F5F0E8]">
-          <Image
-            src={product.image}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={img(product.image)}
             alt={product.name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 
