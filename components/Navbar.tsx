@@ -33,7 +33,7 @@ export default function Navbar() {
           <img
             src={img("/images/logo-patch.jpg")}
             alt="Southern Sticks"
-            className="h-10 w-10 object-contain"
+            className="h-[60px] w-[60px] object-contain"
           />
           <span className="font-display text-xl tracking-wider text-[#1A3A2A]">
             SOUTHERN STICKS
