@@ -1,3 +1,3 @@
-:HL["/southern-sticks/_next/static/chunks/b76c5261ea2b59dc.css","style"]
+:HL["/southern-sticks/_next/static/chunks/ee4b870660c40bf0.css","style"]
 :HL["/southern-sticks/images/logo-patch.jpg","image"]
-0:{"buildId":"ev00Sj9YuLqY7baRl43ds","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"upUJywWen5DqMTh82l7xh","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
