@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Logo from "./Logo";
+import { img } from "@/lib/image";
 
 const links = [
   { href: "/shop", label: "SHOP" },
@@ -27,9 +27,14 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        {/* Logo + Wordmark */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <Logo className="h-7 w-7 text-[#1A3A2A]" />
+        {/* Company Logo */}
+        <Link href="/" className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={img("/images/logo-patch.jpg")}
+            alt="Southern Sticks"
+            className="h-10 w-10 object-contain"
+          />
           <span className="font-display text-xl tracking-wider text-[#1A3A2A]">
             SOUTHERN STICKS
           </span>

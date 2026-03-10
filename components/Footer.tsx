@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo";
+import { img } from "@/lib/image";
 
 const quickLinks = [
   { href: "/shop", label: "Shop" },
@@ -18,7 +18,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5">
-              <Logo className="h-6 w-6 text-white" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={img("/images/logo-patch.jpg")} alt="Southern Sticks" className="h-8 w-8 object-contain brightness-0 invert" />
               <span className="font-display text-lg tracking-wider">
                 SOUTHERN STICKS
               </span>
