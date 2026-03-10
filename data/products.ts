@@ -8,8 +8,13 @@ export interface Product {
   image: string;
 }
 
+// All images via Unsplash (basePath-safe for GitHub Pages static export)
+// Hat: golfer at sunset swing — shows hats naturally
+// Polo/Shirt: on-course lifestyle
+// Accessories: course/detail shots
+
 export const products: Product[] = [
-  // Hats — real product mockup for first hat, Unsplash for others
+  // Hats
   {
     id: 1,
     name: 'The Classic Navy Rope Hat',
@@ -17,7 +22,7 @@ export const products: Product[] = [
     category: 'hats',
     price: 45,
     description: 'Our signature rope hat in deep navy. A timeless silhouette with a structured crown and classic rope detail across the brim. The crossed-clubs "S" emblem, built for the course and worn everywhere.',
-    image: '/images/hat-mockup.jpg',
+    image: 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 2,
@@ -26,7 +31,7 @@ export const products: Product[] = [
     category: 'hats',
     price: 40,
     description: 'Lightweight, moisture-wicking performance fabric with a pre-curved brim and adjustable snapback. From the range to the clubhouse.',
-    image: '/images/hat-mockup.jpg',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 3,
@@ -35,7 +40,7 @@ export const products: Product[] = [
     category: 'hats',
     price: 38,
     description: 'Full-brim sun protection with Southern style. Packable, breathable, and ready for 18 under the summer sun.',
-    image: '/images/hat-mockup.jpg',
+    image: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80&auto=format&fit=crop',
   },
   // Polos
   {
@@ -54,7 +59,7 @@ export const products: Product[] = [
     category: 'polos',
     price: 85,
     description: 'A blue and white stripe polo that channels the clean lines of mountain-top courses. Moisture-wicking, quick-dry, and cut for movement.',
-    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 6,
@@ -72,7 +77,7 @@ export const products: Product[] = [
     category: 'polos',
     price: 75,
     description: 'No fuss, all performance. Our core polo in solid deep navy. If it isn\'t broke, don\'t fix it.',
-    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
   },
   // Shirts
   {
@@ -91,7 +96,7 @@ export const products: Product[] = [
     category: 'shirts',
     price: 90,
     description: 'The shirt you\'re wearing when you\'re telling your best round story. Crisp cotton poplin, subtle stripe, clubhouse-ready.',
-    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80&auto=format&fit=crop',
   },
   // Accessories
   {
@@ -101,7 +106,7 @@ export const products: Product[] = [
     category: 'accessories',
     price: 35,
     description: 'Protect your driver in style. Knit construction with the embroidered crossed-clubs "S" logo. Fits standard drivers up to 460cc.',
-    image: '/images/hat-mockup.jpg',
+    image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 11,
@@ -110,7 +115,7 @@ export const products: Product[] = [
     category: 'accessories',
     price: 25,
     description: 'Set of 3 enamel ball markers. The crossed-clubs logo in navy/white, forest green/gold, and all black. Mark your spot in style.',
-    image: '/images/hat-mockup.jpg',
+    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 12,
@@ -119,6 +124,6 @@ export const products: Product[] = [
     category: 'accessories',
     price: 55,
     description: 'Full-grain leather with a brushed brass buckle. Subtle embossed Southern Sticks logo on the tail. Fits 28"–42".',
-    image: '/images/hat-mockup.jpg',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
   },
 ];
