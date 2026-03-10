@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { img } from "@/lib/image";
+import Search from "@/components/Search";
+import CartIcon from "@/components/CartIcon";
 
 const links = [
   { href: "/shop", label: "SHOP" },
@@ -22,8 +24,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 bg-white transition-shadow duration-200 ${
-        scrolled ? "shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : ""
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
@@ -51,6 +55,8 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Search />
+          <CartIcon />
           <Link
             href="/shop"
             className="rounded-full bg-[#1A3A2A] px-6 py-2 text-xs font-semibold tracking-[0.15em] text-white transition-colors hover:bg-[#0D1F17]"
@@ -59,27 +65,34 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="flex flex-col gap-1.5 md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block h-0.5 w-6 bg-[#1A3A2A] transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-[#1A3A2A] transition-opacity ${open ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-[#1A3A2A] transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
-          />
-        </button>
+        {/* Mobile: cart + hamburger */}
+        <div className="flex items-center gap-4 md:hidden">
+          <CartIcon />
+          <button
+            className="flex flex-col gap-1.5"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`block h-0.5 w-6 bg-[#1A3A2A] transition-all duration-300 ${open ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-[#1A3A2A] transition-all duration-300 ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-[#1A3A2A] transition-all duration-300 ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="border-t border-[#1A3A2A]/10 px-6 pb-4 md:hidden">
+      {/* Mobile menu with slide animation */}
+      <div
+        className={`overflow-hidden transition-all duration-300 md:hidden ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="border-t border-[#1A3A2A]/10 px-6 pb-4">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -98,6 +111,14 @@ export default function Navbar() {
             SHOP NOW
           </Link>
         </div>
+      </div>
+
+      {/* Mobile backdrop */}
+      {open && (
+        <div
+          className="fixed inset-0 top-[72px] z-[-1] bg-black/20 md:hidden"
+          onClick={() => setOpen(false)}
+        />
       )}
     </nav>
   );

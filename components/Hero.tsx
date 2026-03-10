@@ -1,7 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { img } from "@/lib/image";
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <section className="relative">
       {/* Split Hero */}
@@ -21,17 +30,28 @@ export default function Hero() {
         <div className="flex flex-1 flex-col justify-center bg-[#0D1F17] px-8 py-16 md:px-16 lg:px-24">
           <div className="max-w-md">
             <h1 className="font-display leading-[0.9] tracking-wide text-white">
-              <span className="block text-[100px] md:text-[140px] lg:text-[180px]">
+              <span
+                className={`hero-line block text-[100px] md:text-[140px] lg:text-[180px] ${mounted ? "hero-line-animate" : ""}`}
+              >
                 PLAY
               </span>
-              <span className="text-outline block text-[100px] md:text-[140px] lg:text-[180px]">
+              <span
+                className={`hero-line text-outline block text-[100px] md:text-[140px] lg:text-[180px] ${mounted ? "hero-line-animate" : ""}`}
+                style={{ animationDelay: "200ms" }}
+              >
                 WITH
               </span>
-              <span className="block text-[100px] md:text-[140px] lg:text-[180px]">
+              <span
+                className={`hero-line block text-[100px] md:text-[140px] lg:text-[180px] ${mounted ? "hero-line-animate" : ""}`}
+                style={{ animationDelay: "400ms" }}
+              >
                 PRIDE
               </span>
             </h1>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div
+              className={`mt-10 flex flex-col gap-4 sm:flex-row ${mounted ? "hero-line hero-line-animate" : ""}`}
+              style={{ animationDelay: "600ms" }}
+            >
               <Link
                 href="/shop"
                 className="inline-block bg-[#C9A84C] px-10 py-4 text-center text-xs font-bold tracking-[0.2em] text-[#0D1F17] transition-colors hover:bg-[#d4b65e]"
@@ -54,7 +74,7 @@ export default function Hero() {
           <img
             src={img("/images/polo-navy-stripe-model.jpg")}
             alt="Southern Sticks lifestyle"
-            className="absolute inset-0 h-full w-full object-cover object-top"
+            className={`absolute inset-0 h-full w-full object-cover object-top ${mounted ? "hero-image-animate" : ""}`}
           />
           {/* Gold left border accent */}
           <div className="absolute left-0 top-0 h-full w-1 bg-[#C9A84C]" />

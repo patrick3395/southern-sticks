@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import { img } from "@/lib/image";
 import AddToBag from "./AddToBag";
+import ImageZoom from "@/components/ImageZoom";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -38,15 +39,8 @@ export default async function ProductPage({
       </nav>
 
       <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-        {/* Product Image */}
-        <div className="relative aspect-[3/4] overflow-hidden bg-[#F5F0E8]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={img(product.image)}
-            alt={product.name}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
+        {/* Product Image with Lightbox */}
+        <ImageZoom src={img(product.image)} alt={product.name} />
 
         {/* Product Info */}
         <div className="flex flex-col justify-center">

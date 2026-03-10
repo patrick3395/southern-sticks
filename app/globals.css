@@ -12,9 +12,19 @@
   --color-text-dark: #1A1A1A;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #ffffff;
   color: #1A1A1A;
+}
+
+/* Gold focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #C9A84C;
+  outline-offset: 2px;
 }
 
 /* Outlined text utility */
@@ -51,6 +61,82 @@ body {
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* Marquee pause on hover */
+.marquee-wrap:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Hero text entrance animation */
+@keyframes heroSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-line {
+  opacity: 0;
+}
+
+.hero-line-animate {
+  animation: heroSlideIn 0.7s ease forwards;
+}
+
+/* Hero image entrance */
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-image-animate {
+  animation: heroImageIn 0.8s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* Cart badge bounce */
+@keyframes cartBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.animate-cart-bounce {
+  animation: cartBounce 0.3s ease;
+}
+
+/* Lightbox fade in */
+@keyframes lightboxIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-lightbox-in {
+  animation: lightboxIn 0.2s ease forwards;
+}
+
+/* Shake animation for size selector validation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease;
 }
 
 /* Custom scrollbar */

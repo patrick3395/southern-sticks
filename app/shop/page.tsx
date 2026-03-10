@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ProductCard from "@/components/ProductCard";
+import FadeIn from "@/components/FadeIn";
 import { products } from "@/data/products";
 
 const categories = ["all", "hats", "polos", "shirts", "accessories"] as const;
@@ -35,7 +36,7 @@ export default function ShopPage() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-all ${
+              className={`px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-200 ${
                 active === cat
                   ? "bg-[#1A3A2A] text-white"
                   : "border border-[#1A3A2A]/20 text-[#1A3A2A] hover:border-[#1A3A2A] hover:bg-[#1A3A2A]/5"
@@ -48,8 +49,10 @@ export default function ShopPage() {
 
         {/* Product Grid */}
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          {filtered.map((product, i) => (
+            <FadeIn key={product.id} delay={i * 100}>
+              <ProductCard product={product} />
+            </FadeIn>
           ))}
         </div>
       </section>

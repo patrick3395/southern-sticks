@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import FadeIn from "@/components/FadeIn";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -18,82 +19,84 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="mx-auto max-w-xl px-6 py-20">
-        {submitted ? (
-          <div className="text-center">
-            <h2 className="font-display text-3xl tracking-wider text-[#1A3A2A]">
-              MESSAGE SENT
-            </h2>
-            <div className="mx-auto mt-4 h-px w-12 bg-[#C9A84C]" />
-            <p className="mt-6 text-[#1A1A1A]/60">
-              Thanks for reaching out. We&apos;ll get back to you soon.
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSubmitted(true);
-            }}
-            className="space-y-6"
-          >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="mt-2 w-full border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
-              />
+      <FadeIn>
+        <section className="mx-auto max-w-xl px-6 py-20">
+          {submitted ? (
+            <div className="text-center">
+              <h2 className="font-display text-3xl tracking-wider text-[#1A3A2A]">
+                MESSAGE SENT
+              </h2>
+              <div className="mx-auto mt-4 h-px w-12 bg-[#C9A84C]" />
+              <p className="mt-6 text-[#1A1A1A]/60">
+                Thanks for reaching out. We&apos;ll get back to you soon.
+              </p>
             </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="mt-2 w-full border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                required
-                className="mt-2 w-full resize-none border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[#1A3A2A] py-5 font-display text-lg tracking-wider text-white transition-colors hover:bg-[#0D1F17]"
+          ) : (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitted(true);
+              }}
+              className="space-y-6"
             >
-              SEND MESSAGE
-            </button>
-          </form>
-        )}
-      </section>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="mt-2 w-full border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="mt-2 w-full border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-xs font-semibold uppercase tracking-[0.15em] text-[#1A1A1A]"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  className="mt-2 w-full resize-none border border-[#1A3A2A]/20 px-4 py-3 text-sm text-[#1A1A1A] outline-none transition-colors focus:border-[#1A3A2A]"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-[#1A3A2A] py-5 font-display text-lg tracking-wider text-white transition-colors hover:bg-[#0D1F17]"
+              >
+                SEND MESSAGE
+              </button>
+            </form>
+          )}
+        </section>
+      </FadeIn>
     </>
   );
 }
